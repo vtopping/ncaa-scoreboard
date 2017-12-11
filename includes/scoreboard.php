@@ -27,8 +27,7 @@ $weights = array('live','pre','final');
  * @param  	array $comp1 
  * @param  	array $comp2
  * @return  	integer $ret_val
- *
-**/
+ */
 usort($ncaa_scbd['games'], function ($comp1, $comp2) use($weights) {
 $ret_val = array_search($comp1['game']['gameState'], $weights) - array_search($comp2['game']['gameState'], $weights);
 
