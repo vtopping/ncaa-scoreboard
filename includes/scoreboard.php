@@ -23,11 +23,12 @@ $ncaa_scbd = json_decode($ncaa_file_str, true);
 $weights = array('live','pre','final');
 
 
-/** SORT THE JSON FILE BY GAME STATE **/
+/** SORT THE JSON FILE BY GAME STATE **
  * @param  	array $comp1 
  * @param  	array $comp2
  * @return  	integer $ret_val
  *
+**/
 usort($ncaa_scbd['games'], function ($comp1, $comp2) use($weights) {
 $ret_val = array_search($comp1['game']['gameState'], $weights) - array_search($comp2['game']['gameState'], $weights);
 
